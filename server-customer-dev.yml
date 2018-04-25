@@ -1,0 +1,24 @@
+server:
+  port: 8763
+spring:
+  application:
+    name: service-customer
+  boot:
+    admin:
+      url: http://localhost:9999
+management:
+     security:
+        enabled: false
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+feign:
+  hystrix:
+    enabled: true
+info:
+  app:
+   name: "@project.name@"
+   description: "@project.description@"
+   version: "@project.version@"
+   spring-boot-version: "@project.parent.version@"
